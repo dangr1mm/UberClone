@@ -9,7 +9,7 @@ const SearchResults = (props) => {
     return (
         <View style={styles.container}>
             <View style={styles.map}>
-                <HomeMap />
+                <RouteMap />
             </View>
             
             <View style={styles.types}>

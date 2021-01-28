@@ -13,7 +13,7 @@ const RouteMap = (props) => {
     }
 
     const destination = {
-        latitude: 28.450127,
+        latitude: 28.460127,
         longitude: -16.269045
     }
 
@@ -33,6 +33,17 @@ const RouteMap = (props) => {
                     origin={origin}
                     destination={destination}
                     apikey={apiKey.directions}
+                    strokeWidth={5}
+                    strokeColor="black"
+                />
+
+                <Marker 
+                    coordinate={origin}
+                    title={'Origin'}
+                />
+                <Marker
+                    coordinate={destination}
+                    title={'Destination'}
                 />
                 
             </MapView>
