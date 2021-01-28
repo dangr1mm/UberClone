@@ -13,6 +13,8 @@ import SearchResults from './src/screens/SearchResults';
 
 import Icon from 'react-native-vector-icons/AntDesign';
 import HomeSearch from './src/components/HomeSearch';
+import DestinationSearch from './src/screens/DestinationSearch';
+import RouteMap from './src/components/RouteMap';
 
 const App = () => {
   return (

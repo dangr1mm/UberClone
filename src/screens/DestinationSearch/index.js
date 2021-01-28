@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { View, TextInput, SafeAreaView } from 'react-native';
 import styles from './styles';
+import apiKey from '../../../keys';
 
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 
@@ -32,7 +33,7 @@ const DestinationSearch = (props) => {
                     }}
                     fetchDetails
                     query={{
-                        key: 'AIzaSyBFZrCVzZ80PdHZ4UQhRCbYsinHD_lu2nw',
+                        key: apiKey.places,
                         language: 'en',
                     }}
                 />
@@ -48,7 +49,7 @@ const DestinationSearch = (props) => {
                     }}
                     fetchDetails
                     query={{
-                        key: 'AIzaSyBFZrCVzZ80PdHZ4UQhRCbYsinHD_lu2nw',
+                        key: apiKey.places,
                         language: 'en',
                     }}
                 />
