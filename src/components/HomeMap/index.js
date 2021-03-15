@@ -20,23 +20,32 @@ const HomeMap = (props) => {
         <View style={styles.container}>
             <MapView
                 provider={PROVIDER_GOOGLE}
+                showsUserLocation={true}
                 style={styles.maps}
                 initialRegion={{
                 latitude: 28.450627, 
                 longitude: -16.263045,
-                latitudeDelta: 0.0922,
-                longitudeDelta: 0.0421,
-                }}>
+                latitudeDelta: 0.0222,
+                longitudeDelta: 0.0121,
+                }}
+            >
 
                 {cars.map((car) => (
                     <Marker
-                            key={cars.id} 
-                            coordinate={{ latitude: car.latitude, longitude: car.longitude }}
-                        > 
-                            <Image 
-                                style={{ width: 60, height: 60, resizeMode: 'contain' }}
-                                source={getImage(car.type)} 
-                            />
+                        key={cars.id} 
+                        coordinate={{ latitude: car.latitude, longitude: car.longitude }}
+                    > 
+                        <Image 
+                            style={{ 
+                                width: 60, 
+                                height: 60, 
+                                resizeMode: 'contain',
+                                transform: [{
+                                    rotate: `${car.heading}deg`
+                                }]    
+                            }}
+                            source={getImage(car.type)} 
+                        />
                     </Marker>
                 ))}
                 
