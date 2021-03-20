@@ -13,6 +13,13 @@ import Geolocation from '@react-native-community/geolocation';
 import Router from './src/navigation/Root';
 import DestinationSearch from './src/screens/DestinationSearch';
 
+import Amplify from 'aws-amplify';
+import config from './src/aws-exports';
+import {withAuthenticator } from 'aws-amplify-react-native';
+
+Amplify.configure(config)
+
+
 navigator.geolocation = require('@react-native-community/geolocation');
 
 const App = () => {
@@ -57,4 +64,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default withAuthenticator(App);

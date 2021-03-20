@@ -34,7 +34,6 @@ const DestinationSearch = (props) => {
                     placeholder='Where from?'
                     onPress={(data, details = null) => {
                         setOriginPlace({data, details});
-                        console.log(data, details);
                     }}
                     enablePoweredByContainer={false}
                     suppressDefaultStyles
@@ -59,7 +58,6 @@ const DestinationSearch = (props) => {
                     placeholder='Where to?'
                     onPress={(data, details = null) => {
                         setDestinationPlace({data, details});
-                        console.log(data, details);
                     }}
                     enablePoweredByContainer={false}
                     suppressDefaultStyles
